@@ -54,14 +54,19 @@ class ProductManager {
     }
   }
 
-  async getProducts() {
+  async getProducts(limit) {
     try {
       const readProducts = await this.readJson();
       console.log("Todos los productos:");
-      console.log(readProducts);
+      if (Array.isArray(readProducts)) {
+        const limitProducts = limit
+          ? readProducts.slice(0, limit)
+          : readProducts;
+        console.log(limitProducts);
+        return limitProducts;
+      }
     } catch (error) {
       console.log("No se encontraron productos.");
-      await fs.writeFile(this.path, "[]", "utf-8");
     }
   }
 
@@ -70,8 +75,10 @@ class ProductManager {
     const product = readProducts.find((product) => product.id === id);
     if (product) {
       console.log(product);
+      return product;
     } else {
       console.log(`ID de producto (${id}) no encontrado.`);
+      return "El producto no existe.";
     }
   }
 
@@ -103,3 +110,5 @@ class ProductManager {
     }
   }
 }
+
+module.exports = ProductManager;

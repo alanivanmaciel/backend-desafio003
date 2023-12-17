@@ -1,0 +1,110 @@
+[
+  {
+    "title": "Remera",
+    "description": "Remera Over Size.",
+    "price": 20.99,
+    "thumbnail": "/images/RemeraOS.jpg",
+    "code": "R001",
+    "stock": 10,
+    "id": 1
+  },
+  {
+    "title": "Short",
+    "description": "Short Negro XL.",
+    "price": 30,
+    "thumbnail": "/images/ShortN.jpg",
+    "code": "S001",
+    "stock": 15,
+    "id": 2
+  },
+  {
+    "title": "Camiseta",
+    "description": "Camiseta Blanca Manga Corta.",
+    "price": 25,
+    "thumbnail": "/images/CamisetaB.jpg",
+    "code": "C002",
+    "stock": 20,
+    "id": 3
+  },
+  {
+    "title": "Zapatillas",
+    "description": "Zapatillas Deportivas Negras.",
+    "price": 50,
+    "thumbnail": "/images/ZapatillasN.jpg",
+    "code": "Z003",
+    "stock": 10,
+    "id": 4
+  },
+  {
+    "title": "Gorra",
+    "description": "Gorra de Béisbol Azul.",
+    "price": 15,
+    "thumbnail": "/images/GorraAzul.jpg",
+    "code": "G004",
+    "stock": 30,
+    "id": 5
+  },
+  {
+    "title": "Mochila",
+    "description": "Mochila Negra con Compartimento para Laptop.",
+    "price": 40,
+    "thumbnail": "/images/MochilaN.jpg",
+    "code": "M005",
+    "stock": 12,
+    "id": 6
+  },
+  {
+    "title": "Sweater",
+    "description": "Sweater Gris Cuello Redondo.",
+    "price": 35,
+    "thumbnail": "/images/SweaterG.jpg",
+    "code": "SW006",
+    "stock": 18,
+    "id": 7
+  },
+  {
+    "title": "Chaqueta",
+    "description": "Chaqueta de Cuero Marrón.",
+    "price": 50,
+    "thumbnail": "/images/ChaquetaMarron.jpg",
+    "code": "C016",
+    "stock": 15,
+    "id": 8
+  },
+  {
+    "title": "Bufanda",
+    "description": "Bufanda de Lana Gris a Rayas.",
+    "price": 18,
+    "thumbnail": "/images/BufandaGris.jpg",
+    "code": "B017",
+    "stock": 22,
+    "id": 9
+  },
+  {
+    "title": "Gorra",
+    "description": "Gorra de Béisbol Roja.",
+    "price": 15,
+    "thumbnail": "/images/GorraRoja.jpg",
+    "code": "G018",
+    "stock": 30,
+    "id": 10
+  },
+  {
+    "title": "Pantalón Corto",
+    "description": "Pantalón Corto Deportivo Negro.",
+    "price": 20,
+    "thumbnail": "/images/PantalonCortoNegro.jpg",
+    "code": "PC019",
+    "stock": 18,
+    "id": 11
+  },
+  {
+    "title": "Camiseta Manga Larga",
+    "description": "Camiseta Manga Larga Blanca.",
+    "price": 25,
+    "thumbnail": "/images/CamisetaMLBlanca.jpg",
+    "code": "CM020",
+    "stock": 20,
+    "id": 12
+  }
+]
