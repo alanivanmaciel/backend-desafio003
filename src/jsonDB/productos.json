@@ -1,6 +1,6 @@
 [
   {
-    "title": "Remera",
+    "title": "Perrdo",
     "description": "Remera Over Size.",
     "price": 20.99,
     "thumbnail": "/images/RemeraOS.jpg",
@@ -88,23 +88,5 @@
     "code": "G018",
     "stock": 30,
     "id": 10
-  },
-  {
-    "title": "Pantalón Corto",
-    "description": "Pantalón Corto Deportivo Negro.",
-    "price": 20,
-    "thumbnail": "/images/PantalonCortoNegro.jpg",
-    "code": "PC019",
-    "stock": 18,
-    "id": 11
-  },
-  {
-    "title": "Camiseta Manga Larga",
-    "description": "Camiseta Manga Larga Blanca.",
-    "price": 25,
-    "thumbnail": "/images/CamisetaMLBlanca.jpg",
-    "code": "CM020",
-    "stock": 20,
-    "id": 12
   }
 ]

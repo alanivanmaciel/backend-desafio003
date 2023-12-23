@@ -1,9 +1,8 @@
-const { promises } = require("fs");
-const fs = promises;
+const fs = require('node:fs/promises');
 
 class ProductManager {
   constructor() {
-    this.path = "./product.json";
+    this.path = "./src/jsonDB/productos.json";
   }
 
   async readJson() {
@@ -24,10 +23,10 @@ class ProductManager {
     if (
       !product.title ||
       !product.description ||
-      !product.price ||
-      !product.thumbnail ||
       !product.code ||
-      !product.stock
+      !product.price ||
+      !product.stock ||
+      !product.category
     ) {
       console.log("Todos los campos deben ser obligatorios.");
       return;
@@ -46,9 +45,11 @@ class ProductManager {
         0
       );
       product.id = maxId + 1;
+      product.status = true;
       readProducts.push(product);
       const newProduct = JSON.stringify(readProducts, null, 2);
       await fs.writeFile(this.path, newProduct, "utf-8");
+      console.log('Producto agregado correctamente.');
     } catch (error) {
       console.log("Error al registrar producto: ", error);
     }
