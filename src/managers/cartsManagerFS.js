@@ -49,27 +49,32 @@ class CartsManager {
     }
   }
 
-  async addProductToCart(cid, pid, quantity){
+  async addProductToCart(cid, pid, quantity) {
     try {
-        console.log(cid, pid, quantity);
-        const carts = await this.readJson();
-        const cart = carts.find((cart) => cart.id === cid);
-        console.log(carts);
-        
-        if (!cart) {
-            console.error(`Carrito con ID ${cid} no encontrado.`);
-            return;
-          }
-        
+      const carts = await this.readJson();
+      const cart = carts.find((cart) => cart.id === parseInt(cid));
+
+      if (!cart) {
+        console.error(`Carrito con ID ${cid} no encontrado.`);
+        return;
+      }
+      const existingProduct = cart.product.find(
+        (item) => item.product === parseInt(pid)
+      );
+
+      if (existingProduct) {
+        existingProduct.quantity += parseInt(quantity);
+      } else {
         cart.product.push({
-            product: parseInt(pid),
-            quantity: parseInt(quantity)
-        })
-
-        await this.saveCarts(carts)
-
+          product: parseInt(pid),
+          quantity: parseInt(quant),
+        });
+      }
+      await fs.writeFile(this.path, JSON.stringify(carts, null, 2), "utf-8");
+      console.log('Producto agregado correctamente.');
+      return cart;
     } catch (error) {
-        console.log(error);
+      console.log(error);
     }
   }
 }

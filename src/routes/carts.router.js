@@ -7,14 +7,14 @@ const cartsService = new CartsManager();
 router
   .get("/:cid", async (req, res) => {
     try {
-        const {cid} = req.params;
-        const cart = await cartsService.getCartById(parseInt(cid))
-        res.send({
-            status: "succes",
-            payload: cart,
-          });
+      const { cid } = req.params;
+      const cart = await cartsService.getCartById(parseInt(cid));
+      res.send({
+        status: "succes",
+        payload: cart,
+      });
     } catch (error) {
-        console.log(error);
+      console.log(error);
     }
   })
   .post("/", async (req, res) => {
@@ -30,16 +30,14 @@ router
   })
 
   .post("/:cid/product/:pid", async (req, res) => {
-    const {cid, pid} = req.params;
-    const {quantity} = req.body
+    const { cid, pid } = req.params;
+    const { quantity } = req.body;
 
-    const cart = await cartsService.addProductToCart(cid, pid, quantity)
-
+    const cart = await cartsService.addProductToCart(cid, pid, quantity);
     res.send({
-        status: 'succes',
-         cart})
-
-    console.log("Router post carts");
+      status: "succes",
+      cart,
+    });
   });
 
 module.exports = router;
